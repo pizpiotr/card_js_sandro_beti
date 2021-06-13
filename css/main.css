@@ -5,33 +5,50 @@
   font-style: oblique 0deg 20deg;
 }
 
-body {
-  height: 100vh;
-}
-
 .wrapper {
   position: absolute;
-  display: center;
   width: 430px;
   height: 665px;
   margin: 10px auto;
   border-style: solid;
-  border-width: 2px;
+  border-width: 9px;
   background-color: whitesmoke;
+  background-image: url(/images/fluehmah.png);
 }
 
 .typo {
   font-family: 'WhyteInktrapVariable';
-  font-weight: 950;
-  font-size: 100px;
+  font-weight: 0;
+  font-size: 90px;
   position: relative;
+  margin-top: -10px;
+  margin-bottom: -60px;
 }
 
 .typo2 {
   font-family: 'WhyteInktrapVariable';
   font-weight: 950;
-  font-size: 100px;
+  font-size: 90px;
   position: relative;
   text-align: right;
+  margin-top: -20px;
+}
+
+.typo3 {
+  font-family: 'WhyteInktrapVariable';
+  font-weight: 0;
+  font-size: 90px;
+  position: relative;
+  margin-top: -60px;
+  margin-bottom: -60px;
+}
+
+.typo4 {
+  font-family: 'WhyteInktrapVariable';
+  font-weight: 950;
+  font-size: 90px;
+  position: relative;
+  text-align: right;
+  margin-top: -20px;
 }
 /*# sourceMappingURL=main.css.map */

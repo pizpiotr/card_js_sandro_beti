@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const typo = document.querySelector('.typo');
     const typo2 = document.querySelector('.typo2');
+    const typo3 = document.querySelector('.typo3');
+    const typo4 = document.querySelector('.typo4');
     const wrapper = document.querySelector('.wrapper');
 
     var w = window.innerWidth;
@@ -33,11 +35,9 @@ wrapper.addEventListener('mousemove', e => {
     var xvalue = xtypo - parsed;
     var xvalue2 = xvalue - parsednav;
 
-    //  if(e.pageX > parsed + 130){
-    //      xvalue = 130;
-    //  }
+ 
     
-    var xvalue2 = scale(xvalue, 0, 430, 0, 130 )
+    var xvalue2 = scale(xvalue, 0, 430, 15, 140 )
 
     typo.setAttribute("style", "left: " +(xvalue2)+ "px;");
     typo.style['font-variation-settings'] = "'wght'" + weyght;
@@ -50,9 +50,14 @@ wrapper.addEventListener('mousemove', e => {
     typo2.setAttribute("style", "left: " +(antixvalue)+ "px;");
     typo2.style['font-variation-settings'] = "'wght'" + antiweyght;
 
+    typo3.setAttribute("style", "left: " +(xvalue2)+ "px;");
+    typo3.style['font-variation-settings'] = "'wght'" + weyght;
 
+    typo4.setAttribute("style", "left: " +(antixvalue)+ "px;");
+    typo4.style['font-variation-settings'] = "'wght'" + antiweyght;
 
-console.log(xvalue);
+  
+console.log(e.pageX);
 
     
 })
