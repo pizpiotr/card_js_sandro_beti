@@ -5,19 +5,46 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('The DOM is ready.');
     
     const typo = document.querySelector('.typo');
+    const wrapper = document.querySelector('.wrapper');
 
-document.addEventListener('mousemove', e => {
-    console.log(typo.style.fontWeight);
+    var w = window.innerWidth;
+    var whalf = w*0.5;
     
-    // typo.setAttribute("style", "top: "+e.pageY+"px; left: "+e.pageX+"px;")
+    wrapper.setAttribute("style", "left: " +(whalf - 215)+ "px;");
 
-    // typo.setAttribute("style", "fontWeight: "+e.pageX+"px;")
-    typo.style['font-variation-settings'] = "'wght'" + e.pageX;
 
+
+wrapper.addEventListener('mousemove', e => {
+    var fontcurs = e.pageX;
+    var wleft = wrapper.style.left;
+    var xtypo = e.pageX;
+    const parsed = parseInt(wleft, 10);
+
+    function scale (number, inMin, inMax, outMin, outMax) {
+        return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+    }
+
+    const weyght = scale(fontcurs, parsed, parsed + 430, 0, 900);
+
+    const parsednav = scale(parsed, parsed + 430, 0, 300);
+
+    var xvalue = xtypo - parsed;
+
+
+     if(e.pageX > parsed + 140){
+         xvalue = 140;
+     }
+     
+    typo.setAttribute("style", "left: " +(xvalue)+ "px;")
+    typo.style['font-variation-settings'] = "'wght'" + weyght;
+
+
+console.log(typo.style.left);
+
+    
 })
-  if(typo.left > "392px;" ){
 
-    typo.setAttribute("style", "left: 393px;")
 
-  }
+
+
   });
