@@ -22,15 +22,15 @@
     background-image: url(/images/fluehmah.png);
 }
 
+
 .slider{
     margin-top: 50px;
     position: absolute;
     width: 430px;
     height: 80px;
     margin: 700px auto;
-    border-style: solid;
-    border-width: 9px;
-    background-color: whitesmoke;
+   
+  
     font-family: 'WhyteInktrapVariable';
     font-weight: 0;
     font-size: 20px;
@@ -46,6 +46,7 @@
     position: relative;
     margin-top: -10px;
     margin-bottom: -60px;
+    color: #D5081C;
 }   
 
 .typo2{
@@ -56,6 +57,7 @@
     position: relative;
     text-align: right;
     margin-top: -20px;
+    color: #000000;
 }
 
 .typo3{
@@ -66,6 +68,7 @@
     position: relative;
     margin-top: -60px;
     margin-bottom: -60px;
+    color: #D5081C;
 }   
 
 .typo4{
@@ -76,4 +79,5 @@
     position: relative;
     text-align: right;
     margin-top: -20px;
+    color: #000000;
 }

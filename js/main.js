@@ -17,32 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapper.setAttribute("style", "left: " +(whalf - 215)+ "px;");
     slider.setAttribute("style", "left: " +(whalf - 215)+ "px;");
 
-    
-
-wrapper.addEventListener('mousemove', e => {
-    var fontcurs = e.pageX;
-    var wleft = wrapper.style.left;
-    var xtypo = e.pageX;
-    const parsed = parseInt(wleft, 10);
-
     function scale (number, inMin, inMax, outMin, outMax) {
         return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
     }
 
+wrapper.addEventListener('mousemove', e => {
+
+    var fontcurs = e.pageX;
+    var wleft = wrapper.style.left;
+    var xtypo = e.pageX;
+    const parsed = parseInt(wleft, 10);
     const weyght = scale(fontcurs, parsed, parsed + 430, 0, 900);
     const antiweyght = scale(fontcurs, parsed, parsed + 430, 900, 0);
-
     const parsednav = scale(parsed, parsed + 430, 140, 0);
-
     var xvalue = xtypo - parsed;
     var xvalue2 = xvalue - parsednav;
-
- 
-    
-    var xvalue2 = scale(xvalue, 0, 430, 15, 125 )
-
-   
-
+    var xvalue2 = scale(xvalue, 0, 430, 15, 125 );
     var antival = parseInt(typo.style.left, 10);
     var antixvalue = xvalue2 - 2*antival;
 
@@ -58,8 +48,20 @@ wrapper.addEventListener('mousemove', e => {
     typo4.setAttribute("style", "left: " +(antixvalue)+ "px;");
     typo4.style['font-variation-settings'] = "'wght'" + antiweyght;
 
-  
-console.log(e.pageX);
+    if(xvalue2 > 120){
+        typo.style.color = "#000000";
+        typo3.style.color = "#000000";
+        typo2.style.color = "#D5081C";
+        typo4.style.color = "#D5081C";
+    }
+
+    if(xvalue2 < 20){
+        typo.style.color = "#000000";
+        typo3.style.color = "#000000";
+        typo2.style.color = "#D5081C";
+        typo4.style.color = "#D5081C";
+    }
+
 
     
 })
