@@ -9,10 +9,6 @@ body {
   height: 100vh;
 }
 
-.box {
-  display: center;
-}
-
 .wrapper {
   position: absolute;
   display: center;
@@ -29,5 +25,13 @@ body {
   font-weight: 950;
   font-size: 100px;
   position: relative;
+}
+
+.typo2 {
+  font-family: 'WhyteInktrapVariable';
+  font-weight: 950;
+  font-size: 100px;
+  position: relative;
+  text-align: right;
 }
 /*# sourceMappingURL=main.css.map */

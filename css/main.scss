@@ -10,9 +10,6 @@ height: 100vh;
 
 }
 
-.box{
-display: center;
-}
 
 .wrapper{
     position: absolute;
@@ -34,3 +31,11 @@ display: center;
     position: relative;
 
 }   
+
+.typo2{
+    font-family: 'WhyteInktrapVariable';
+    font-weight: 950;
+    font-size: 100px;
+    position: relative;
+    text-align: right;
+}
