@@ -9,13 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const typo3 = document.querySelector('.typo3');
     const typo4 = document.querySelector('.typo4');
     const wrapper = document.querySelector('.wrapper');
+    const slider = document.querySelector('.slider');
 
     var w = window.innerWidth;
     var whalf = w*0.5;
     
     wrapper.setAttribute("style", "left: " +(whalf - 215)+ "px;");
+    slider.setAttribute("style", "left: " +(whalf - 215)+ "px;");
 
-
+    
 
 wrapper.addEventListener('mousemove', e => {
     var fontcurs = e.pageX;
@@ -37,15 +39,15 @@ wrapper.addEventListener('mousemove', e => {
 
  
     
-    var xvalue2 = scale(xvalue, 0, 430, 15, 140 )
+    var xvalue2 = scale(xvalue, 0, 430, 15, 125 )
 
-    typo.setAttribute("style", "left: " +(xvalue2)+ "px;");
-    typo.style['font-variation-settings'] = "'wght'" + weyght;
+   
 
     var antival = parseInt(typo.style.left, 10);
     var antixvalue = xvalue2 - 2*antival;
 
-   
+    typo.setAttribute("style", "left: " +(xvalue2)+ "px;");
+    typo.style['font-variation-settings'] = "'wght'" + weyght;
 
     typo2.setAttribute("style", "left: " +(antixvalue)+ "px;");
     typo2.style['font-variation-settings'] = "'wght'" + antiweyght;
