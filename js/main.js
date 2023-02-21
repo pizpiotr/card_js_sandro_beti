@@ -10,10 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const typo4 = document.querySelector('.typo4');
     const wrapper = document.querySelector('.wrapper');
     const slider = document.querySelector('.slider');
-
     var w = window.innerWidth;
     var whalf = w*0.5;
-    
+
     wrapper.setAttribute("style", "left: " +(whalf - 215)+ "px;");
     slider.setAttribute("style", "left: " +(whalf - 215)+ "px;");
 
@@ -23,12 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 wrapper.addEventListener('mousemove', e => {
 
+
+
+
     var fontcurs = e.pageX;
     var wleft = wrapper.style.left;
     var xtypo = e.pageX;
     const parsed = parseInt(wleft, 10);
-    const weyght = scale(fontcurs, parsed, parsed + 430, 0, 900);
-    const antiweyght = scale(fontcurs, parsed, parsed + 430, 900, 0);
+    const weyght = scale(fontcurs, parsed, parsed + 430, 300, 900);
+    const antiweyght = scale(fontcurs, parsed, parsed + 430, 900, 300);
     const parsednav = scale(parsed, parsed + 430, 140, 0);
     var xvalue = xtypo - parsed;
     var xvalue2 = xvalue - parsednav;
@@ -65,8 +67,6 @@ wrapper.addEventListener('mousemove', e => {
 
     
 })
-
-
 
 
   });
